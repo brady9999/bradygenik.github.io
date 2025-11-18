@@ -10,9 +10,6 @@ const memes = ["/Images/meme1.png"];
 const notes = [
   "HONK! 🦆",
   "Quack??",
-  "Gimme BREADDD",
-  "Waddle I do without you?",
-  "Quack is cheap, but I’m priceless.",
   "Mine now!",
   "Your cursor belongs to me.",
   "Fear the goose.",
@@ -153,4 +150,30 @@ document.addEventListener("touchmove", e => {
     honk.play();
   }
 });
-;
+
+// Toggle chaos mode
+toggle.addEventListener("click", () => {
+  chaos = !chaos;
+  toggle.innerText = chaos ? "🪦" : "🦆";
+
+  if (chaos && geese.length === 0) {
+    spawnGoose();
+  } else if (!chaos) {
+    geese.forEach(({ goose, note }) => {
+      goose.remove();
+      note.remove();
+    });
+    geese = [];
+  }
+});
+
+// Rage mode (press R)
+document.addEventListener("keydown", e => {
+  if (e.key.toLowerCase() === "r" && chaos && geese.length > 0) {
+    honk.play();
+    // Reposition goose randomly
+    const { goose } = geese[0];
+    goose.style.left = Math.random() * document.documentElement.scrollWidth + "px";
+    goose.style.top = Math.random() * document.documentElement.scrollHeight + "px";
+  }
+});
