@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <title>Brady Genik</title>
+  <title>Brady Genik — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Brady Genik — Experimental, bold, professional. Portfolio showcasing projects in Python, networking, security, and intuitive product builds." />
   <link rel="canonical" href="https://bradygenik.com/" />
@@ -13,7 +13,7 @@
   <meta property="og:description" content="Experimental. Bold. Professional. Intuitive. Confident." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bradygenik.com/" />
-  <meta property="og:image" content="https://bradygenik.com/" />
+  <meta property="og:image" content="https://bradygenik.com/og-image.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,8 @@
   <meta name="twitter:image" content="https://bradygenik.com/og-image.jpg" />
 
   <!-- Favicons -->
-  <link rel="icon" href="Images/Brady Genik.png" class="Favicons" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
@@ -32,6 +33,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brady Genik",
+    "url": "https://bradygenik.com",
+    "sameAs": [
+      "https://github.com/bradygenik",
+      "https://linkedin.com/in/bradygenik"
+    ],
+    "jobTitle": "Network Systems Admin Student",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MITT"
+    }
+  }
+  </script>
+
   <script>
     // Prevent flash of wrong theme
     (function() {
@@ -219,5 +240,6 @@
   </footer>
   <script src="java.js" defer></script>
   <script src="Duck.js" defer></script>
+  
 </body>
 </html>
