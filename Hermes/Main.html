@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hermes's Notebook</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hermes's Notebook</h1>
+  </header>
+
+  <aside>
+    <input type="text" id="searchBar" placeholder="Search notes..."/>
+    <div id="notesContainer"></div>
+
+    <div class="sidebar-actions">
+      <button id="addNoteButton" onclick="addNote()">Add Note</button>
+      <button id="clearNotesButton" onclick="clearNotes()">Clear All Notes</button>
+      <button id="viewNotesButton" onclick="renderNotes()">View Notes</button>
+      <button id="viewTrashButton" onclick="renderTrash()">
+        View Trash <span id="trashCount">0</span>
+      </button>
+      <button id="clearTrashButton" onclick="clearTrash()">Clear Trash</button>
+    </div>
+  </aside>
+
+  <main id="editor" class="disabled">
+    <div class="note-header">
+      <input type="text" id="noteTitle" placeholder="Note Title" oninput="handleTyping()"/>
+      <button id="Pinbtn" class="pin-button" onclick="togglePin()" aria-label="Pin note">📌</button>
+    </div>
+
+    <textarea id="noteContent" placeholder="Write your note here..." oninput="handleTyping()"></textarea>
+
+    <div class="controls">
+      <span id="wordCount">0 words</span>
+      <span id="note-date">Last edited: -</span>
+    </div>
+  </main>
+
+  <button id="fabAddNote" onclick="addNote()">+</button>
+
+  <script src="Script.js" defer></script>
+</body>
+</html>

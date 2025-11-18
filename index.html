@@ -1,0 +1,223 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Brady Genik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Brady Genik — Experimental, bold, professional. Portfolio showcasing projects in Python, networking, security, and intuitive product builds." />
+  <link rel="canonical" href="https://bradygenik.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brady Genik — Portfolio" />
+  <meta property="og:description" content="Experimental. Bold. Professional. Intuitive. Confident." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bradygenik.com/" />
+  <meta property="og:image" content="https://bradygenik.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Brady Genik — Portfolio" />
+  <meta name="twitter:description" content="Experimental. Bold. Professional. Intuitive. Confident." />
+  <meta name="twitter:image" content="https://bradygenik.com/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="Images/Brady Genik.png" class="Favicons" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts (self-host in production) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Prevent flash of wrong theme
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header" role="banner">
+  <nav class="nav" aria-label="Primary">
+    <div class="brand">
+      <a href="#home" aria-label="Go to home">
+        <img src="Images/Brady Genik.png" alt="Brady Genik Logo" class="logo" />
+      </a>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <span class="icon">🌙</span>
+      </button>
+      <button class="walter-toggle" id="toggle" aria-label="Toggle Walter mode" title="Walter Activation">
+        <span class="icon">🦆</span>
+      </button>
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Praise</a></li>
+      <li><a href="#contact" class="cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <main id="main">
+    <section id="home" class="hero" aria-label="Intro">
+      <div class="hero-inner">
+        <h1 class="hero-title">Experimental. Bold. Professional.</h1>
+        <p class="hero-subtitle">I build intuitive systems across software, networking, and security.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn primary">See work</a>
+          <a href="#contact" class="btn ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-header">
+        <h2>Selected work</h2>
+        <p>Systems and products named for forces and makers—meant to be lived with, not just launched.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Project filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="Powered By Athena">Powered By Athena</button>
+        <button class="filter" data-filter="Fun Projects">Fun Projects</button>
+        <button class="filter" data-filter="Poseidon">Poseidon</button>
+        <button class="filter" data-filter="Helpful Projects">Helpful Projects</button>
+      </div>
+
+      <div class="grid" id="project-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="section-header">
+        <h2>Capabilities</h2>
+        <p>Grounded engineering with direct paths to value, from prototyping to production hardening.</p>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <h3>Software</h3>
+          <ul>
+            <li>Python, JavaScript, HTML, CSS</li>
+            <li>Node, Java</li>
+            <li>Testing, performance profiling</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Networking</h3>
+          <ul>
+            <li>CCNA, CompTIA Server+, Security+</li>
+            <li>Routing & switching, VLANs, VPNs</li>
+            <li>Wireshark, firewall policies, zero trust</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>Ops & cloud</h3>
+          <ul>
+            <li>Windows, PowerShell, Bash</li>
+            <li>AWS basics, cost awareness</li>
+            <li>Monitoring, logging, backup strategy</li>
+          </ul>
+        </div>
+        <div class="skill">
+          <h3>AI & automation</h3>
+          <ul>
+            <li>Prompt design</li>
+            <li>Agentic workflows, evaluations</li>
+            <li>Ethics, safety-by-design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <figure class="portrait">
+          <img src="Images/Goose.png" alt="Portrait of Brady Genik" loading="lazy" />
+          <figcaption>Brady Genik</figcaption>
+        </figure>
+        <div class="bio">
+          <p>I'm currently attending Manitoba Institute for Trades and Technology aiming to gain my Network Systems Admin (NSA) diploma. </p>
+          <p>I love cyber security and I'm hoping to get into the pen testing field, </p>
+
+          <a href="/Doc/BradyGenik_Resume.pdf" class="btn ghost" download>Download resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section alt">
+      <div class="section-header">
+        <h2>Praise</h2>
+        <p>Notes from people I’ve worked with.</p>
+      </div>
+      <div class="carousel" aria-label="Testimonials">
+        <button class="carousel-prev" aria-label="Previous testimonial">‹</button>
+        <div class="carousel-track" id="testimonial-track"></div>
+        <button class="carousel-next" aria-label="Next testimonial">›</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Tell me about the thing you’re trying to make real.</p>
+      </div>
+      <form action="https://formspree.io/f/xvgvrnwe" method="POST" class="contact-form" id="contact-form" novalidate>
+        <div class="input">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="input">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Send message</button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Brady Genik. All rights reserved.</p>
+      <div class="social">
+        <a href="https://github.com/brady9999" aria-label="GitHub" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/brady-genik-1a949024a" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+        <a href="mailto:Bradygenik@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="java.js" defer></script>
+  <script src="Duck.js" defer></script>
+</body>
+</html>
