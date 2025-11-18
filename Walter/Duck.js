@@ -151,13 +151,26 @@ document.addEventListener("touchmove", e => {
   }
 });
 
-// Toggle chaos mode
+function randomHonks() {
+  if (chaos) {
+    // 30% chance to honk every 3–6 seconds
+    if (Math.random() < 0.5) {
+      honk.play();
+    }
+    const delay = 3000 + Math.random() * 3000; // between 3–6s
+    setTimeout(randomHonks, delay);
+  }
+}
+
+
+// Start honking when chaos begins
 toggle.addEventListener("click", () => {
   chaos = !chaos;
   toggle.innerText = chaos ? "🪦" : "🦆";
 
   if (chaos && geese.length === 0) {
     spawnGoose();
+    randomHonks(); // kick off honk loop
   } else if (!chaos) {
     geese.forEach(({ goose, note }) => {
       goose.remove();
@@ -166,6 +179,8 @@ toggle.addEventListener("click", () => {
     geese = [];
   }
 });
+
+
 
 // Rage mode (press R)
 document.addEventListener("keydown", e => {
@@ -177,3 +192,4 @@ document.addEventListener("keydown", e => {
     goose.style.top = Math.random() * document.documentElement.scrollHeight + "px";
   }
 });
+
