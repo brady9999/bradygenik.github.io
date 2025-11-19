@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Python • Node • AI',
       desc: 'A mean, sassy and commanding AI assistant who isnt scared to share his opinions.',
       image: 'Images/Athena.png',
-      links: { demo: 'https://bradygenik.com/athena', code: 'https://github.com/brady9999/Athena' }
+      links: { demo: 'https://athena.bradygenik.com/', code: 'https://github.com/brady9999/Athena' }
     },
     {
       title: 'Apollo',
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       meta: 'Python • Node • AI',
       desc: 'A place for song writers to work on their song lryics',
       image: 'Images/Apollo.png',
-      links: { demo: 'https://bradygenik.com/apollo', code: 'https://github.com/brady9999/Apollo' }
+      links: { demo: 'https://apollo.bradygenik.com/', code: 'https://github.com/brady9999/Apollo' }
     },
 
     //Fun Projects
