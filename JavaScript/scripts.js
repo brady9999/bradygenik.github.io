@@ -206,25 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* -------------------------
-     Contact form demo
-     -------------------------*/
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Simple demo feedback; replace with fetch() to your endpoint
-      const submit = contactForm.querySelector('button[type="submit"]');
-      if (submit) {
-        submit.disabled = true;
-        submit.textContent = 'Sending...';
-      }
-      setTimeout(() => {
-        alert('Demo: message captured. Integrate the form handler to send messages.');
-        if (submit) { submit.disabled = false; submit.textContent = 'Send'; }
-        contactForm.reset();
-      }, 900);
-    });
-  }
 // Testimonials
   const testimonials = [
     {
